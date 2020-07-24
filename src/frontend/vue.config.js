@@ -17,5 +17,13 @@ module.exports = {
         watchOptions: {
             poll: 1000
         }
+    },
+    chainWebpack: config => {
+        config
+            .plugin('html')
+            .tap(args => {
+                args[0].title = 'IoT NT - BALENA'
+                return args
+            })
     }
 }
