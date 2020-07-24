@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
     <router-view class="pb-20"></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Navigation from "./components/navigation/Navigation.vue";
 import "@/assets/css/tailwind.css";
+import Footer from "./components/navigation/Footer"
 
 export default {
   name: 'App',
   components: {
-    Navigation
+    Footer: Footer
   }
 }
 </script>

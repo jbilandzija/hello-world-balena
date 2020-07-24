@@ -1,6 +1,6 @@
-FROM balenalib/intel-edison-alpine-openjdk:latest
-VOLUME /tmp
-ADD target/BalenaCloud.Hello-0.0.1-SNAPSHOT.jar app.jar
-RUN sh -c 'touch /app.jar'
-EXPOSE 8891
-ENTRYPOINT ["java","-Dspring.profiles.active=docker", "-jar", "/app.jar"]
+FROM balenalib/revpi-core-3-debian-openjdk:latest
+
+COPY target/*.jar /var/opt/balena-intro-service.jar
+
+WORKDIR "/var/opt/"
+CMD ["java","-Dspring.profiles.active=balena","-jar","balena-intro-service.jar"]

@@ -1,4 +1,4 @@
-package com.example.balena.cloud.hello.BalenaCloud.Hello
+package com.example.balena.cloud
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

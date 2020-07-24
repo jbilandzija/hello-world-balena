@@ -1,6 +1,11 @@
 // tailwind.config.js
 module.exports = {
-  theme: {},
-  variants: {},
-  plugins: [],
+    theme: {
+        fontFamily: {
+            'display': ['Oswald'],
+            'body': ['Open Sans']
+        }
+    },
+    variants: {},
+    plugins: [],
 }
